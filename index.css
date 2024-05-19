@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0%;
+}
+header{
+    height: 60px;
+    /* position: fixed; */
+    width: 100%;
+    background-color: #B2BEB5;
+    display: flex;
+}
+.backLog{
+    background-color: #da5437;
+}
+.doing{
+    background-color: #C9D917;
+}
+.review{
+    background-color: #0986DC;
+}
+.done{
+    background-color: #1BDC09;
+}
+.category-wrapper{
+    height: 40px;
+    background-color: #999C9A;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: 250px;
+}
+.category{
+    height: 30px;
+    width: 70px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.action-wrapper{
+    height: 40px;
+    background-color: #999C9A;
+    display: flex;
+    width: 65px;
+    margin: 10px;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.action-wrapper .add{
+    width: 30px;
+    padding: 9px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.action-wrapper .delete{
+    width: 30px;
+    padding: 10px;
+}
+.input-modal{
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.input-modal.hide{
+    display: none;
+}
+.input-modal .left-section{
+    background-color: #15bb4c;
+    flex-grow: 1;
+}
+.input-modal .right-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 100px;
+    background-color: #6CA07D;
+}
+.input-modal .right-section .category{
+    height: 50px;
+    width: 90px;
+}
+.input-modal .right-section .category.selected{
+    border: 1.5px solid wheat;
+}
+.taskList{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+}
+.taskList .backLog-taskList,.doing-taskList,.done-taskList,.review-taskList{
+    width: 150px;
+    height:max-content;
+    background-color: #c9d917;
+    margin-top: 15px;
+    border-radius: 7px; 
+    border: 0px solid #000; 
+    padding: 10px; 
+    background-color: #f9f9f9; 
+}
+.taskList .backLog-taskList .task,.doing-taskList .task,.done-taskList .task,.review-taskList .task{
+    width: 130px;
+    height: 80px;
+    background-color: #da5437;
+    margin: 10px;
+}
+
+.taskList .backLog-taskList .task .task-id,.doing-taskList .task .task-id,.done-taskList .task .task-id,.review-taskList .task .task-id{
+    background-color: crimson;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.taskList .doing-taskList .task{
+    width: 130px;
+    height: 80px;
+    background-color: #da5437;
+    margin: 10px;
+}
+
+.taskList .backLog-taskList .task .task-id{
+    background-color: crimson;
+    height: 30px;
+}
+
+.taskList .backLog-taskList .heading,.taskList .doing-taskList .heading,.taskList .review-taskList .heading,.taskList .done-taskList .heading{
+    text-align: center;
+    width: 100%;
+    font-weight: 800;
+    height: 25px;
+    background-color: white;
+    color: #0986DC; 
+}
+.task .task-delete-icon{
+    position: relative;
+    left: 110px;
+    bottom: 22px;
+}
+.fa-trash{
+    cursor: pointer;
+}
+.action-wrapper .add:hover,.action-wrapper .delete:hover{
+    background-color: #1BDC09;
+}
+
+.taskList[data-deleteEnabled = "false"] .task-delete-icon{
+    display: none;
+}
+.taskList[data-deleteEnabled = "false"] .task-title textarea{
+    pointer-events: none;
+}
+.task .task-title textarea{
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    
+}
+.search-bar{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    
+}
+.search-bar input{
+    height: 25px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    padding-left:5px;
+    padding-top: 5px;
+}
